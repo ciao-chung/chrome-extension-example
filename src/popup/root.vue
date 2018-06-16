@@ -7,7 +7,7 @@
     data: () => ({
     }),
     computed: { },
-    created () { },
+    created() { },
     mounted () { },
     methods: {
       tab () {
