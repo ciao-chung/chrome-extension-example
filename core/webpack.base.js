@@ -47,7 +47,13 @@ module.exports = {
         options: {
           extractCSS: true,
           loaders: {
-            ...cssLoaders(),
+            css: cssLoaders().css,
+            postcss: cssLoaders().postcss,
+            less: cssLoaders().less,
+            scss: cssLoaders().scss,
+            sass: cssLoaders().sass,
+            stylus: cssLoaders().stylus,
+            styl: cssLoaders().styl,
             js: { loader: 'babel-loader' }
           },
           transformToRequire: {
