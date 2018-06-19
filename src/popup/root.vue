@@ -1,23 +1,13 @@
-<template lang="pug">
-    div
-      el-button(type="primary" @click="tab") New tab 
+<template>
+  <div>
+    popup
+  </div>
 </template>
 <script>
-  export default {
-    data: () => ({
-    }),
-    computed: { },
-    created() { },
-    mounted () { },
-    methods: {
-      tab () {
-        chrome.tabs.create({ url: 'pages/app.html' })
-      }
-    }
-  }
+import bootstrap from 'bootstrap/dist/js/bootstrap.min.js'
+export default {}
 </script>
-<style lang="scss">
-  div {
-    color: blue
-  }
-</style>
+
+<style src="bootstrap/dist/css/bootstrap.min.css"></style>
+<style src="font-awesome/css/font-awesome.min.css"></style>
+<style lang="sass" scoped></style>
