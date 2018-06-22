@@ -1,18 +1,9 @@
-<template lang="pug">
-    div options
+<template>
+  <div>options</div>
 </template>
+
 <script>
-  export default {
-    data: () => ({
-    }),
-    computed: { },
-    created () { },
-    mounted () { },
-    methods: { }
-  }
+export default {}
 </script>
-<style>
-  div {
-    color: blue
-  }
-</style>
+
+<style></style>

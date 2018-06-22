@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const ChromeReloadPlugin  = require('wcer')
 const {cssLoaders, htmlPage} = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-
 let resolve = dir => path.join(__dirname, '..', 'src', dir)
 module.exports = {
   entry: {
@@ -27,7 +26,13 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'ext': path.resolve(__dirname, '../src/ext'),
+      'content': path.resolve(__dirname, '../src/content'),
+      'popup': path.resolve(__dirname, '../src/popup'),
+      'static': path.resolve(__dirname, '../static'),
+      'backend': path.resolve(__dirname, '../src/backend'),
+      'options': path.resolve(__dirname, '../src/options'),
     }
   },
   module: {
@@ -97,6 +102,12 @@ module.exports = {
     new ChromeReloadPlugin({
       port: 9090,
       manifest: path.join(__dirname, '..', 'src', 'manifest.js')
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery/dist/jquery",
+      jQuery: "jquery/dist/jquery",
+      "window.jQuery": "jquery",
+      "window.$": "jquery",
     }),
   ],
   performance: { hints: false },

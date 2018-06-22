@@ -1,6 +1,5 @@
 # IDE
 .vscode
-.idea
 
 # dependencies
 node_modules
@@ -11,3 +10,5 @@ yarn.lock
 
 # Backpack build
 build
+
+.idea

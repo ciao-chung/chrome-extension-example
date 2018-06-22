@@ -1,8 +1,9 @@
 <template>
   <div>
-    popup
+    <h1>popup</h1>
   </div>
 </template>
+
 <script>
 import bootstrap from 'bootstrap/dist/js/bootstrap.min.js'
 export default {}
