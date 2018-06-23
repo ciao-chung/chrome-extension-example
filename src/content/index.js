@@ -1,0 +1,1 @@
+document.getElementById('lst-ib').value = 'foo bar ...'
